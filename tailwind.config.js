@@ -8,12 +8,18 @@ module.exports = {
         'yellow': '#F6AE2D',
         'orange': '#F26419',
         'cyan': '#55DDE0',
+        'text-white': '#ffffff',
+        'black': '#1e1e1e',
+        'dark-background': '#1f2937',
+        'baby-blue': '#0A81D1',
+        'off-white': '#d1d5db',
+        
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
       },
       screens: {
-        sm: '480px',
+        sm: '390px',
         md: '768px',
         lg: '976px',
         xl: '1440px',

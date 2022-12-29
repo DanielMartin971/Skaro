@@ -20,5 +20,11 @@
   "homepage": "https://github.com/DanielMartin971/MPE#readme",
   "devDependencies": {
     "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.28.0"
   }
 }
