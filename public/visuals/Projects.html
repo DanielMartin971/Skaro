@@ -15,11 +15,8 @@
         'orange': '#F26419',
         'cyan': '#55DDE0',
         'text-white': '#ffffff',
-        //---DARK BACKGROUND IS USED WITH BABY BLUE TO MAKE THE GRADIENT FOR MAIN BODY COLOR----//
         'dark-background': '#1f2937',
-        //---BABY-BLUE USED WITH DARK-BACKGROUND TO CREATE THE GRADIENT FOR THE MAIN BODY COLOR---//
         'baby-blue': '#0A81D1',
-        //---OFF WHITE WILL BE USED FOR THE CONTAINER BODY FOR CARDS/LOGIN PAGE-----------------//
         'off-white': '#d1d5db',
         'black': '#1e1e1e',
       },
@@ -38,20 +35,9 @@
   }
         
     </script>
-
-    <!-- -----------TODO: THE MAINPAGE NEEDS RESPONSIVE DESIGN FOR THE CARDS------------ -->
-    <!-- -----------TODO: MAKE THE NAVBAR A DIFFERENT COLOR?---------------------------- -->
-    <!-- -----------TODO: CHANGE CARD TITLES TO BE ALL UPPERCASE---------------------------- -->
-    <!-- -----------TODO: ADD JAVASCRIPT FOR THE BURGER MENU FORRESPONSIVE DESIGN/ SIGN OUT OPTION---------------------------- -->
-
-
-    <!-- ----------------------NAME OF THE DASHBOARD?------------------------ -->
-    <title>Skaro</title>
+    <title>Projects</title>
 </head>
-
-
-<!-- MAIN BACKGROUND COLOR FOR THE WHOLE PAGE USING GRADIENT -->
-<body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white">
+<body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white object-scale-down">
 
     <!--
   This example requires updating your template:
@@ -72,7 +58,7 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-             <!-- CURRENT NAME OF ALL THE PAGES EXCEPT CALENDAR -->
+              <!-- TODO when clicked it sets the opacity to a light color and changes it to blue -->
               <a href="mainPage.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75" aria-current="page">Dashboard</a>
 
               <a href="Projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Projects</a>
@@ -85,7 +71,6 @@
             </div>
           </div>
         </div>
-        <!-- ///////////////////////////////////I BELIEVE THIS IS FOR THE NOTIFICATION BELL FEAUTURE, MIGHT GET RID OF THIS///////////////////////////////////////////////////////////////////////// -->
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
             <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -96,7 +81,7 @@
               </svg>
             </button>
 
-            <!-- -----------PROFILE DROPDOWN CAN USE THIS WITH JAVASCRIPT AND ALSO TO LOGOUT---------------// -->
+            <!-- Profile dropdown -->
             <div class="relative ml-3">
               <div>
                 <button type="button" class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -119,7 +104,6 @@
               <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-gradient-to-l from-dark-background to-black" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                   <!-- Drop down menu here -->
-                  <!-- ---------------SIGNOUT OPTION IS HERE-------------// -->
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:opacity-75" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
               </div>
             </div>
@@ -149,10 +133,9 @@
         </div>
       </div>
     </div>
-
-
-
-    <!-- MOBILE MENU, show/hide based on menu state. -->
+    
+    <!-- ******MOBILE MENU****** -->
+    <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -194,41 +177,77 @@
 <!-- Add in colors for the dashboard menu -->
   <header class="bg-white shadow">
     <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-      <!-- ----------NAME OF THE PAGE ON THE TOP OF THE SCREEN----------- -->
-      <h1 class="text-3xl  tracking-tight text-gray-900">Dashboard</h1>
+      <h1 class="text-3xl  tracking-tight text-gray-900">Projects</h1>
     </div>
   </header>
-
-
-  <!-- -----------MAIN BODY WHERE CONTENT IS BEING STORED---------------------- -->
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <!-- Replace with your content -->
       <div class="px-4 py-6 sm:px-0">
-        <!-- ------------CONTAINER-------------- -->
-        <div class="h-96 rounded-lg border-2 border-solid flex-wrap place-items-center flex justify-around border-gray-200 bg-off-white">
+        <!-- container with cards -->
+        <div class="h-96 rounded-lg border-2 border-solid flex-wrap place-items-center  flex justify-around border-gray-200 bg-off-white">
           <h1>
           </h1>
-          <!-- ------------CARDS THAT ARE STORING AND UPDATING THE INFO---------- -->
-          <!-- ---TODO ALLOW THE CARDS TO BE UPDATED FROM EVERY TASK COMPLETE, TOTAL PROJECTS, TEAM STATUS, MAYBE CALANDER---------------- -->
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
-            <h1 class="text-center">Tasks Completed</h1>
+          <!-- Actual cards that store info -->
+          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-boldh-auto w-auto p-4">
+            <h1 class="text-center">My Projects</h1>
+            <hr>
             <br>
             <p class="text-center">0</p>
           </div>
-          <!-- Card for project status -->
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold  w-64 h-48 p-4" id="project">
-            <p class="text-center"> Total Projects</p>
+          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold  p-4 h-auto w-auto">
+            <h1 class="text-center">Ongoing Department Projects</h1>
+            <br>
+            
+            <table class="table-auto text-center">
+                <thread>
+                    <tr>
+                        <th class="px-4 py-4">Department</th>
+                        <th class="px-4">Project</th>
+                        <th class="px-4">Assigned</th>
+                        <th class="px-4">Due Date</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr>
+                        <td class="px-4 py-2">Department 1</td>
+                        <td class="px-4 py-2">Project 1</td>
+                        <td class="flex -space-x-1 overflow-hidden px-4 py-2">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                        </td>
+                        <td class="px-4 py-2">1/23/23</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">Department 2</td>
+                        <td class="px-4 py-2">Project 2</td>
+                        <td class="flex -space-x-1 overflow-hidden px-4 py-2">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="">
+                        </td>
+                        <td class="px-4 py-2">1/23/23</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">Department 3</td>
+                        <td class="px-4 py-2">Project 3</td>
+                        <td class="flex -space-x-1 overflow-hidden px-4 py-2">
+                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                        </td>
+                        <td class="px-4 py-2">1/23/23</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Allow the card to grow to show the departments and the projects that they are working on -->
+          </div>
+          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold h-auto w-auto p-4">
+            <h1 class="text-center">Urgent</h1>
+            <hr>
             <br>
             <p class="text-center">0</p>
-          </div>
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
-            <p class="text-center">Team Status</p>
-            <br>
-            <p class="text-center">No Status</p>
-          </div>
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
-            <p class="text-center">Calendar</p>
           </div>
         </div>
       </div>
@@ -250,6 +269,7 @@
 Employee: is manager? , firstName, lastName, email, projects, password
 Tasks: add tasks for employees, work on tasks for manager 
 Team Status: Add cards of each department and employees  -->
+
 
 
 

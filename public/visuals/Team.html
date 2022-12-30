@@ -15,11 +15,8 @@
         'orange': '#F26419',
         'cyan': '#55DDE0',
         'text-white': '#ffffff',
-        //---DARK BACKGROUND IS USED WITH BABY BLUE TO MAKE THE GRADIENT FOR MAIN BODY COLOR----//
         'dark-background': '#1f2937',
-        //---BABY-BLUE USED WITH DARK-BACKGROUND TO CREATE THE GRADIENT FOR THE MAIN BODY COLOR---//
         'baby-blue': '#0A81D1',
-        //---OFF WHITE WILL BE USED FOR THE CONTAINER BODY FOR CARDS/LOGIN PAGE-----------------//
         'off-white': '#d1d5db',
         'black': '#1e1e1e',
       },
@@ -38,20 +35,9 @@
   }
         
     </script>
-
-    <!-- -----------TODO: THE MAINPAGE NEEDS RESPONSIVE DESIGN FOR THE CARDS------------ -->
-    <!-- -----------TODO: MAKE THE NAVBAR A DIFFERENT COLOR?---------------------------- -->
-    <!-- -----------TODO: CHANGE CARD TITLES TO BE ALL UPPERCASE---------------------------- -->
-    <!-- -----------TODO: ADD JAVASCRIPT FOR THE BURGER MENU FORRESPONSIVE DESIGN/ SIGN OUT OPTION---------------------------- -->
-
-
-    <!-- ----------------------NAME OF THE DASHBOARD?------------------------ -->
-    <title>Skaro</title>
+    <title>Teams</title>
 </head>
-
-
-<!-- MAIN BACKGROUND COLOR FOR THE WHOLE PAGE USING GRADIENT -->
-<body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white">
+<body class="bg-gradient-to-r from-dark-background object-scale-down to-baby-blue text-text-white">
 
     <!--
   This example requires updating your template:
@@ -72,7 +58,6 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-             <!-- CURRENT NAME OF ALL THE PAGES EXCEPT CALENDAR -->
               <a href="mainPage.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75" aria-current="page">Dashboard</a>
 
               <a href="Projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Projects</a>
@@ -85,7 +70,6 @@
             </div>
           </div>
         </div>
-        <!-- ///////////////////////////////////I BELIEVE THIS IS FOR THE NOTIFICATION BELL FEAUTURE, MIGHT GET RID OF THIS///////////////////////////////////////////////////////////////////////// -->
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
             <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -96,7 +80,7 @@
               </svg>
             </button>
 
-            <!-- -----------PROFILE DROPDOWN CAN USE THIS WITH JAVASCRIPT AND ALSO TO LOGOUT---------------// -->
+            <!-- Profile dropdown -->
             <div class="relative ml-3">
               <div>
                 <button type="button" class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -119,7 +103,6 @@
               <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-gradient-to-l from-dark-background to-black" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                   <!-- Drop down menu here -->
-                  <!-- ---------------SIGNOUT OPTION IS HERE-------------// -->
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:opacity-75" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
               </div>
             </div>
@@ -150,9 +133,7 @@
       </div>
     </div>
 
-
-
-    <!-- MOBILE MENU, show/hide based on menu state. -->
+    <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -194,41 +175,38 @@
 <!-- Add in colors for the dashboard menu -->
   <header class="bg-white shadow">
     <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-      <!-- ----------NAME OF THE PAGE ON THE TOP OF THE SCREEN----------- -->
-      <h1 class="text-3xl  tracking-tight text-gray-900">Dashboard</h1>
+      <h1 class="text-3xl  tracking-tight text-gray-900">Teams</h1>
     </div>
   </header>
-
-
-  <!-- -----------MAIN BODY WHERE CONTENT IS BEING STORED---------------------- -->
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <!-- Replace with your content -->
       <div class="px-4 py-6 sm:px-0">
-        <!-- ------------CONTAINER-------------- -->
+        <!-- container with cards -->
+        <!-- Cant get container to go away -->
         <div class="h-96 rounded-lg border-2 border-solid flex-wrap place-items-center flex justify-around border-gray-200 bg-off-white">
           <h1>
           </h1>
-          <!-- ------------CARDS THAT ARE STORING AND UPDATING THE INFO---------- -->
-          <!-- ---TODO ALLOW THE CARDS TO BE UPDATED FROM EVERY TASK COMPLETE, TOTAL PROJECTS, TEAM STATUS, MAYBE CALANDER---------------- -->
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
-            <h1 class="text-center">Tasks Completed</h1>
+          <!-- Actual cards that store info -->
+          <div class="rounded shadow-xl bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
+            <h1 class="text-center">Departments</h1>
             <br>
             <p class="text-center">0</p>
           </div>
           <!-- Card for project status -->
           <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold  w-64 h-48 p-4" id="project">
-            <p class="text-center"> Total Projects</p>
+            <p class="text-center"> Status</p>
             <br>
             <p class="text-center">0</p>
           </div>
           <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
-            <p class="text-center">Team Status</p>
+            <p class="text-center">Scheduled Off</p>
             <br>
             <p class="text-center">No Status</p>
           </div>
           <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
-            <p class="text-center">Calendar</p>
+            <!-- Upcoming deadlines for departments? Or would that fit into the projects page? -->
+            <p class="text-center">Upcoming Deadlines</p>
           </div>
         </div>
       </div>
@@ -246,7 +224,7 @@
 
 <!-- Add in another section to display the managers tasks that he has to complete -->
 <!-- TODO employees have first last email and status -->
-<!-- Project: project name, employees assigned, progress, tasks projects for all departments / add taks page into projects
+<!-- Project: add tasks page into projects
 Employee: is manager? , firstName, lastName, email, projects, password
 Tasks: add tasks for employees, work on tasks for manager 
 Team Status: Add cards of each department and employees  -->
