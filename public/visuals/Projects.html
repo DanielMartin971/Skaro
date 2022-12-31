@@ -19,6 +19,8 @@
         'baby-blue': '#0A81D1',
         'off-white': '#d1d5db',
         'black': '#1e1e1e',
+        'Mn-Blue': '#3A557A',
+        'Blue-Green': '#2DC2BD',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
@@ -37,6 +39,9 @@
     </script>
     <title>Projects</title>
 </head>
+
+
+
 <body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white object-scale-down">
 
     <!--
@@ -48,13 +53,15 @@
   ```
 -->
 <div class="min-h-full bg">
-  <nav class="bg-gray-800">
+  <nav class="bg-gray-800 bg-gradient-to-r from-Mn-Blue to-Blue-Green">
     <div class="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <h1 class="h-8 w-8 text-4xl font-bold mr-20">Skaro</h1>
           </div>
+
+          <!-- -------------------NAVABAR------------------------------------ -->
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -71,6 +78,9 @@
             </div>
           </div>
         </div>
+
+
+        <!-- --------------------------------NOTIFICATION BELL FEATURE THAT I NEED TO GET RID OF---------------------------------------- -->
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
             <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -81,6 +91,8 @@
               </svg>
             </button>
 
+
+            <!-- ADD JAVASCRIPT TO ONE OF THESE BUTTONS TO LOGOUT AND OPEN THESE SETTINGS -->
             <!-- Profile dropdown -->
             <div class="relative ml-3">
               <div>
@@ -110,7 +122,10 @@
           </div>
         </div>
         <div class="-mr-2 flex md:hidden">
-          <!-- Mobile menu button -->
+
+
+
+          <!-- --------------------MOBILE MENU BUTTON-------------------- -->
           <button type="button"  class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <!--
@@ -137,7 +152,7 @@
     <!-- ******MOBILE MENU****** -->
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+      <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3 ">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
 
@@ -174,104 +189,83 @@
       </div>
     </div>
   </nav>
-<!-- Add in colors for the dashboard menu -->
-  <header class="bg-white shadow">
+
+
+<!-- -----------------------COLORS FOR THE DASHBOARD MENU---------------------- -->
+  <header class="bg-white shadow bg-gradient-to-r from-Mn-Blue to-Blue-Green">
     <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+
+
+
+      <!----------------- NAME OF THE PAGE THAT YOU ARE ON ---------------- -->
       <h1 class="text-3xl  tracking-tight text-gray-900">Projects</h1>
     </div>
   </header>
-  <main>
-    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-      <!-- Replace with your content -->
-      <div class="px-4 py-6 sm:px-0">
-        <!-- container with cards -->
-        <div class="h-96 rounded-lg border-2 border-solid flex-wrap place-items-center  flex justify-around border-gray-200 bg-off-white">
-          <h1>
-          </h1>
-          <!-- Actual cards that store info -->
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-boldh-auto w-auto p-4">
-            <h1 class="text-center">My Projects</h1>
-            <hr>
-            <br>
-            <p class="text-center">0</p>
-          </div>
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold  p-4 h-auto w-auto">
-            <h1 class="text-center">Ongoing Department Projects</h1>
-            <br>
-            
-            <table class="table-auto text-center">
-                <thread>
-                    <tr>
-                        <th class="px-4 py-4">Department</th>
-                        <th class="px-4">Project</th>
-                        <th class="px-4">Assigned</th>
-                        <th class="px-4">Due Date</th>
-                    </tr>
-                </thread>
-                <tbody>
-                    <tr>
-                        <td class="px-4 py-2">Department 1</td>
-                        <td class="px-4 py-2">Project 1</td>
-                        <td class="flex -space-x-1 overflow-hidden px-4 py-2">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                        </td>
-                        <td class="px-4 py-2">1/23/23</td>
-                    </tr>
-                    <tr>
-                        <td class="px-4 py-2">Department 2</td>
-                        <td class="px-4 py-2">Project 2</td>
-                        <td class="flex -space-x-1 overflow-hidden px-4 py-2">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="">
-                        </td>
-                        <td class="px-4 py-2">1/23/23</td>
-                    </tr>
-                    <tr>
-                        <td class="px-4 py-2">Department 3</td>
-                        <td class="px-4 py-2">Project 3</td>
-                        <td class="flex -space-x-1 overflow-hidden px-4 py-2">
-                            <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                        </td>
-                        <td class="px-4 py-2">1/23/23</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- Allow the card to grow to show the departments and the projects that they are working on -->
-          </div>
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold h-auto w-auto p-4">
-            <h1 class="text-center">Urgent</h1>
-            <hr>
-            <br>
-            <p class="text-center">0</p>
-          </div>
+
+<!------------------------ HEADER FOR THE CURRENT PROJECTS TITLE SO THE USER KNOWS WHAT IT IS-------------------------------- -->
+  <header>
+    <h2 class="text-xl p-4">
+      Current Projects
+    </h2>
+  </header>
+  <!--------------- TABLE GOES HERE SINCE I CANT GET IT TO FIT ON SMALL SCREEN WITH THE CARD------------------------------- -->
+  <div class="flex justify-center pt-9">
+    <table class="table-auto bg-off-white text-black border-collapse border" >
+      <thread>
+        <tr>
+          <th class="border-2 px-4">Department</th>
+          <th class="border-2 px-4">Assigned</th>
+          <th class="border-2 px-4">Due Date</th>
+        </tr>
+      </thread>
+      <tbody>
+        <tr>
+         <td class="border-2 px-4">Department 1</td>
+          <td class="border-2 px-4">Joe</td>
+          <td class="border-2 px-4">1/9/23</td>
+        </tr>
+        <tr>
+          <td class="border-2 px-4">Department 2</td>
+          <td class="border-2 px-4">Logan</td>
+          <td class="border-2 px-4">1/1/23</td>
+        </tr>
+        <tr>
+          <td class="border-2 px-4">Department 3</td>
+          <td class="border-2 px-4">Anthony</td>
+          <td class="border-2 px-4">1/1/23</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<!-- -----------------------------------------MAIN CONTAINER BODY FOR THE CARDS TO BE PLACED------------------------- -->
+<main>
+  <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+    <!-- Replace with your content -->
+    <div class="px-4 py-6 sm:px-0">
+      <!-- --------------------------------------CONTAINER THAT CARDS SIT IN------------------------------------------------------ -->
+      <div class="h-96 rounded-lg border-2 border-solid invisible md:place-content-center md:justify-evenly lg:visible lg:flex-nowrap lg:justify-center lg:gap-6 lg:pr-5 xl:visible xl:justify-evenly flex-wrap place-items-center flex justify-center border-gray-200 bg-off-white pt-7">
+        <h1>
+        </h1>
+        <div class="rounded shadow-xl bg-gradient-to-t from-dark-background to-black my-4 text-xl font-bold w-64 h-48 p-4 visible">
+          <h1 class="text-center">My Projects</h1>
+          <hr>
+          <br>
+          <p class="text-center">0</p>
+        </div>
+        <!-- Card for project status -->
+        <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black my-4 text-xl font-bold  w-64 h-48 p-4 visible" id="project">
+          <p class="text-center">Weekly Deadlines</p>
+          <hr>
+          <br>
+          <p class="text-center">0</p>
         </div>
       </div>
-      <!-- /End replace -->
     </div>
-  </main>
+    <!-- /End replace -->
+  </div>
+</main>
 </div>
-
-
-
-
-
-
-
-
-<!-- Add in another section to display the managers tasks that he has to complete -->
-<!-- TODO employees have first last email and status -->
-<!-- Project: project name, employees assigned, progress, tasks projects for all departments / add taks page into projects
-Employee: is manager? , firstName, lastName, email, projects, password
-Tasks: add tasks for employees, work on tasks for manager 
-Team Status: Add cards of each department and employees  -->
-
-
-
 
 </body>
 </html>
