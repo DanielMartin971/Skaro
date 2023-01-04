@@ -13,6 +13,10 @@ module.exports = {
         'dark-background': '#1f2937',
         'baby-blue': '#0A81D1',
         'off-white': '#d1d5db',
+        'Golden-Brown': '#AD6600',
+        'GoldenRod': '#E6AF2E',
+        'Mn-Blue': '#3A557A',
+        'Blue-Green': '#2DC2BD',
         
       },
       fontFamily: {

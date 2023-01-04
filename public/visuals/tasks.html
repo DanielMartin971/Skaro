@@ -10,22 +10,21 @@
         tailwind.config = {
             theme: {
       colors: {
-        'dark-grey': '#1e293b',
         'blue': '#001D3D',
         'yellow': '#F6AE2D',
         'orange': '#F26419',
         'cyan': '#55DDE0',
         'text-white': '#ffffff',
-        'alt-background': '#1f2937',
-        'nav-color': '#0A81D1',
+        'dark-background': '#1f2937',
+        'baby-blue': '#0A81D1',
         'off-white': '#d1d5db',
-        'black-font': '#1e1e1e',
+        'black': '#1e1e1e',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
       },
       screens: {
-        sm: '480px',
+        sm: '390px',
         md: '768px',
         lg: '976px',
         xl: '1440px',
@@ -37,7 +36,7 @@
         
     </script>
 </head>
-<body class="bg-gradient-to-r from-alt-background  to-nav-color text-text-white">
+<body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white">
 
         <!--
       This example requires updating your template:
@@ -61,11 +60,11 @@
                   <!-- TODO when clicked it sets the opacity to a light color and changes it to blue -->
                   <a href="mainPage.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75" aria-current="page">Dashboard</a>
     
-                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Projects</a>
+                  <a href="Projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Projects</a>
     
                   <a href="tasks.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Tasks</a>
     
-                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Team</a>
+                  <a href="Team.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Team</a>
     
                   <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Calendar</a>
                 </div>
@@ -101,7 +100,7 @@
                       From: "transform opacity-100 scale-100"
                       To: "transform opacity-0 scale-95"
                   -->
-                  <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-gradient-to-l from-alt-background to-black-font" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                  <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-gradient-to-l from-dark-background to-black" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                     <!-- Active: "bg-gray-100", Not Active: "" -->
                       <!-- Drop down menu here -->
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:opacity-75" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
@@ -133,20 +132,21 @@
             </div>
           </div>
         </div>
-    
+        
+        <!-- ******MOBILE MENU****** -->
         <!-- Mobile menu, show/hide based on menu state. -->
         <div class="md:hidden" id="mobile-menu">
           <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
     
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-    
             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
     
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tasks</a>
     
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Reports</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+    
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
           </div>
           <div class="border-t border-gray-700 pt-4 pb-3">
             <div class="flex items-center px-5">
@@ -184,20 +184,33 @@
           <!-- Replace with your content -->
           <div class="px-4 py-6 sm:px-0">
             <!-- container with cards -->
-            <div class="h-96 rounded-lg border-2 border-solid flex-wrap place-items-center flex justify-around border-gray-200 bg-off-white">
+            <div class="h-96 rounded-lg border-2 border-solid flex-wrap place-items-center  flex justify-around border-gray-200 bg-off-white">
               <h1>
               </h1>
               <!-- Actual cards that store info -->
-              <div class="rounded shadow-xl  bg-gradient-to-t from-alt-background to-black-font text-xl font-bold w-64 h-48 p-4">
-                <!-- TODO add content into cards to determine height of the cards -->
-                <!-- Make a list for tasks for the user to check off -->
-               <!-- TODO load tasks to the task list -->
-                <h1 class="text-center">My Tasks</h1>
-                <br>
+              <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
+                <h1 class="text-center">Daily Tasks</h1>
                 <hr>
-                  <h1>Task</h1>
-                  <p>Create Wireframe</p>
-                  <hr>
+                <br>
+                <p class="text-center">0</p>
+              </div>
+              <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
+                <h1 class="text-center">Weekly Tasks</h1>
+                <hr>
+                <br>
+                <p class="text-center">0</p>
+              </div>
+              <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
+                <h1 class="text-center">Ongoing</h1>
+                <hr>
+                <br>
+                <p class="text-center">0</p>
+              </div>
+              <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
+                <h1 class="text-center">Urgent</h1>
+                <hr>
+                <br>
+                <p class="text-center">0</p>
               </div>
             </div>
           </div>
