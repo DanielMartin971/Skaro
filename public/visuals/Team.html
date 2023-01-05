@@ -19,6 +19,8 @@
         'baby-blue': '#0A81D1',
         'off-white': '#d1d5db',
         'black': '#1e1e1e',
+        'Mn-Blue': '#3A557A',
+        'Blue-Green': '#2DC2BD',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
@@ -37,6 +39,9 @@
     </script>
     <title>Teams</title>
 </head>
+
+
+<!------------------ MAIN BODY TO CHANGE THE COLOR OF THE WHOLE BACKGROUND-------------------- -->
 <body class="bg-gradient-to-r from-dark-background object-scale-down to-baby-blue text-text-white">
 
     <!--
@@ -48,13 +53,17 @@
   ```
 -->
 <div class="min-h-full bg">
-  <nav class="bg-gray-800">
+  <nav class="bg-gray-800 bg-gradient-to-r from-Mn-Blue to-Blue-Green">
     <div class="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <h1 class="h-8 w-8 text-4xl font-bold mr-20">Skaro</h1>
+            <a href="mainPage.html">
+              <h1 class="h-8 w-8 text-4xl font-bold mr-20">Skaro</h1>
+            </a>
           </div>
+
+
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -66,18 +75,14 @@
 
               <a href="Team.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Team</a>
 
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Calendar</a>
             </div>
           </div>
         </div>
+
+
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
             <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-              <span class="sr-only">View notifications</span>
-              <!-- Heroicon name: outline/bell -->
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-              </svg>
             </button>
 
             <!-- Profile dropdown -->
@@ -100,7 +105,7 @@
                   From: "transform opacity-100 scale-100"
                   To: "transform opacity-0 scale-95"
               -->
-              <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-gradient-to-l from-dark-background to-black" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-gradient-to-l from-dark-background to-black" role="menu" aria-orientation="vertical" id="teams" style="display: none;" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                   <!-- Drop down menu here -->
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:opacity-75" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
@@ -110,7 +115,7 @@
         </div>
         <div class="-mr-2 flex md:hidden">
           <!-- Mobile menu button -->
-          <button type="button"  class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
+          <button type="button" id="res-btn" class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <!--
               Heroicon name: outline/bars-3
@@ -134,18 +139,17 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="md:hidden" id="mobile-menu">
+    <div class="md:hidden" id="mobile-menu" style="display: none;">
       <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+        <a href="mainPage.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
 
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+        <a href="Projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
 
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tasks</a>
+        <a href="tasks.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tasks</a>
 
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+        <a href="Team.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
 
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
       </div>
       <div class="border-t border-gray-700 pt-4 pb-3">
         <div class="flex items-center px-5">
@@ -157,11 +161,6 @@
             <div class="text-sm font-medium leading-none text-gray-400">tom@example.com</div>
           </div>
           <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-            <span class="sr-only">View notifications</span>
-            <!-- Heroicon name: outline/bell -->
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-            </svg>
           </button>
         </div>
         <div class="mt-3 space-y-1 px-2">
@@ -172,8 +171,10 @@
       </div>
     </div>
   </nav>
+
+
 <!-- Add in colors for the dashboard menu -->
-  <header class="bg-white shadow">
+  <header class="bg-white shadow bg-gradient-to-r from-Mn-Blue to-Blue-Green">
     <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
       <h1 class="text-3xl  tracking-tight text-gray-900">Teams</h1>
     </div>
@@ -184,29 +185,33 @@
       <div class="px-4 py-6 sm:px-0">
         <!-- container with cards -->
         <!-- Cant get container to go away -->
-        <div class="h-96 rounded-lg border-2 border-solid flex-wrap place-items-center flex justify-around border-gray-200 bg-off-white">
+        <div class="h-96 rounded-lg border-2 border-solid invisible flex flex-wrap place-items-center justify-center md:space-x-5 lg:visible lg:flex-nowrap lg:gap-4 lg:pr-5 border-gray-200 bg-off-white">
           <h1>
           </h1>
           <!-- Actual cards that store info -->
-          <div class="rounded shadow-xl bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
+          <div class="rounded shadow-xl bg-gradient-to-t from-dark-background to-black visible text-xl font-bold my-4 w-64 h-48 p-4">
             <h1 class="text-center">Departments</h1>
+            <hr>
             <br>
             <p class="text-center">0</p>
           </div>
           <!-- Card for project status -->
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold  w-64 h-48 p-4" id="project">
+          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl visible font-bold my-4 w-64 h-48 p-4" id="project">
             <p class="text-center"> Status</p>
+            <hr>
             <br>
             <p class="text-center">0</p>
           </div>
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
+          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl visible font-bold my-4 w-64 h-48 p-4">
             <p class="text-center">Scheduled Off</p>
+            <hr>
             <br>
             <p class="text-center">No Status</p>
           </div>
-          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl font-bold w-64 h-48 p-4">
+          <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl visible font-bold my-4 w-64 h-48 p-4">
             <!-- Upcoming deadlines for departments? Or would that fit into the projects page? -->
             <p class="text-center">Upcoming Deadlines</p>
+            <hr>
           </div>
         </div>
       </div>
@@ -232,4 +237,5 @@ Team Status: Add cards of each department and employees  -->
 
 
 </body>
+<script src="../js/team.js"></script>
 </html>
