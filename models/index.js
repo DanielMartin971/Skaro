@@ -1,12 +1,7 @@
 const Employee = require('./Employee');
 const Project = require('./Project');
+const Monitor = require('./Monitor')
 
-Employee.hasMany(Project, {
-    foreignKey: 'id',
-    onDelete: 'CASCADE'
-});
+Employee.belongsToMany(Project, { through: Monitor });
 
-Project.hasMany(Employee, {
-    foreignKey: 'id',
-    onDelete: 'CASCADE'
-})
+Project.belongsToMany(Employee, { through:Monitor });
