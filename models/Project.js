@@ -6,7 +6,7 @@ class Project extends Model {}
 Project.init(
     {
       id: {
-        type: DataTypes.Integer,
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
@@ -15,7 +15,7 @@ Project.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-      employees: {
+      employee_ids: {
         type: DataTypes.ARRAY(DataTypes.INTEGER)
       },
       progress: {
