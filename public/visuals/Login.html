@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+      colors: {
+        'dark-grey': '#1e293b',
+        'blue': '#001D3D',
+        'yellow': '#F6AE2D',
+        'orange': '#F26419',
+        'cyan': '#55DDE0',
+        'text-white': '#ffffff',
+        //---DARK BACKGROUND IS USED WITH BABY BLUE TO MAKE THE GRADIENT FOR MAIN BODY COLOR----//
+        'dark-background': '#1f2937',
+        //---BABY-BLUE USED WITH DARK-BACKGROUND TO CREATE THE GRADIENT FOR THE MAIN BODY COLOR---//
+        'baby-blue': '#0A81D1',
+        //---OFF WHITE WILL BE USED FOR THE CONTAINER BODY FOR CARDS/LOGIN PAGE-----------------//
+        'off-white': '#d1d5db',
+        'black': '#1e1e1e',
+        'Golden-Brown': '#AD6600',
+        'GoldenRod': '#E6AF2E',
+        'Mn-Blue': '#3A557A',
+        'Blue-Green': '#2DC2BD',
+      },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
+      screens: {
+        sm: '390px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px',
+      },
+      extend: {},
+    },
+    plugins: [],
+  }
+        
+    </script>
+
+    <!-- -----------TODO: THE MAINPAGE NEEDS RESPONSIVE DESIGN FOR THE CARDS------------ -->
+    <!-- -----------TODO: MAKE THE NAVBAR A DIFFERENT COLOR?---------------------------- -->
+    <!-- -----------TODO: CHANGE CARD TITLES TO BE ALL UPPERCASE---------------------------- -->
+    <!-- -----------TODO: ADD JAVASCRIPT FOR THE BURGER MENU FORRESPONSIVE DESIGN/ SIGN OUT OPTION---------------------------- -->
+
+
+    <!-- ----------------------NAME OF THE DASHBOARD?------------------------ -->
+    <title>Skaro</title>
+</head>
+
+<body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white">
+  <section class="h-screen bg-gray-700">
+  <div class="px-6 h-full text-gray-800">
+    <div
+      class="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
+    >
+      <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+        <form>
+
+          <div
+            class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
+          >
+            <p class="text-center font-semibold mx-4 mb-0">Login</p>
+          </div>
+
+          <!-- Email input -->
+          <div class="mb-6">
+            <input
+              type="text"
+              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-black"
+              id="exampleFormControlInput2"
+              placeholder="Email address"
+            />
+          </div>
+
+          <!-- Password input -->
+          <div class="mb-6">
+            <input
+              type="password"
+              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-black"
+              id="exampleFormControlInput2"
+              placeholder="Password"
+            />
+          </div>
+
+          <div class="text-center lg:text-left">
+            <button
+              type="button"
+              class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out bg-dark-background"
+            >
+              Login
+            </button>
+            <p class="text-sm font-semibold mt-2 pt-1 mb-0">
+              Don't have an account?
+              <br>
+              <br>
+              <a
+                href="#!"
+                class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
