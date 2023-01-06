@@ -1,38 +1,38 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Project extends Model {}
 
 Project.init(
-    {
-      id: {
-        type: DataTypes.Integer,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      projectName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      employees: {
-        type: DataTypes.ARRAY(DataTypes.INTEGER)
-      },
-      progress: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      },
-      tasks: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
-      }
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
-        sequelize,
-        timestamps: true,
-        freezeTableName: true,
-        modelName: 'project',
-      }
+    projectName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    employee_ids: {
+      type: DataTypes.INTEGER,
+    },
+    progress: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    tasks: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+  },
+  {
+    sequelize,
+    timestamps: true,
+    freezeTableName: true,
+    modelName: "project",
+  }
 );
 
 module.exports = Project;

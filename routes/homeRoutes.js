@@ -26,4 +26,26 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/project", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+  res.render("project");
+});
+router.get("/tasks", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+  res.render("tasks");
+});
+router.get("/teams", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+  res.render("teams");
+});
+
 module.exports = router;
