@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+      colors: {
+        'dark-grey': '#1e293b',
+        'blue': '#001D3D',
+        'yellow': '#F6AE2D',
+        'orange': '#F26419',
+        'cyan': '#55DDE0',
+        'text-white': '#ffffff',
+        //---DARK BACKGROUND IS USED WITH BABY BLUE TO MAKE THE GRADIENT FOR MAIN BODY COLOR----//
+        'dark-background': '#1f2937',
+        //---BABY-BLUE USED WITH DARK-BACKGROUND TO CREATE THE GRADIENT FOR THE MAIN BODY COLOR---//
+        'baby-blue': '#0A81D1',
+        //---OFF WHITE WILL BE USED FOR THE CONTAINER BODY FOR CARDS/LOGIN PAGE-----------------//
+        'off-white': '#d1d5db',
+        'black': '#1e1e1e',
+        'Golden-Brown': '#AD6600',
+        'GoldenRod': '#E6AF2E',
+        'Mn-Blue': '#3A557A',
+        'Blue-Green': '#2DC2BD',
+      },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
+      screens: {
+        sm: '390px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px',
+      },
+      extend: {},
+    },
+    plugins: [
+
+        require('@tailwindcss/forms'),
+    ],
+  }
+        
+    </script>
+    <title>Input Form</title>
+</head>
+<body>
+    
+<div class="mt-28">
+    <label for="price" class="block text-sm font-medium text-gray-700">Department</label>
+    <div class="relative mt-1 rounded-md shadow-sm">
+      <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+        <p class="text-gray-500 sm:text-sm">$</p>
+      </div>
+
+      <input type="text" name="price" id="price" class="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="0.00">
+      <div class="absolute inset-y-0 right-0 flex items-center">
+        <label for="currency" class="sr-only">Currency</label>
+        <select id="currency" name="currency" class="h-full rounded-md border-transparent bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          <option>USD</option>
+          <option>CAD</option>
+          <option>EUR</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+  
