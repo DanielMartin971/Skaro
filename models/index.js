@@ -19,3 +19,11 @@ Department.hasMany(Employee);
 Department.hasMany(Project);
 
 
+module.exports = {
+    
+    Employee,
+    Project,
+    Department,
+    ManagerProject
+
+}
