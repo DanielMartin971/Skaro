@@ -22,10 +22,10 @@ Project.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    tasks: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // tasks: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
   },
   {
     sequelize,
