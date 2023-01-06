@@ -1,9 +1,16 @@
 const button = document.getElementById('res-btn');
 const menuDisplay = document.getElementById('mobile-menu');
+
 const projectMenu = document.getElementById('user-menu-button');
 const projectSignout = document.getElementById('projectSignout');
 
-//TODO Fix the bug that always shows the menu for mobile screens
+const modalTrigger = document.getElementById('modalTrigger');
+const modal = document.getElementById('exampleModal');
+const closeTrigger = document.getElementById('closeTrigger');
+
+
+
+//This lets us use the burger menu on smaller screens
 button.addEventListener('click', () => {
     if (menuDisplay.style.display === 'none') {
         menuDisplay.style.display = 'block';
@@ -19,4 +26,14 @@ projectMenu.addEventListener('click', () => {
     } else {
         projectSignout.style.display = 'none';
     }
+});
+
+//toggle the modal open to show input form
+modalTrigger.addEventListener('click', () => {
+    modal.classList.toggle('modal-open');
+});
+
+//Toggle the modal to close on close
+closeTrigger.addEventListener('click', () => {
+    modal.classList.remove('modal-open');
 });

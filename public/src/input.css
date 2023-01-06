@@ -1,0 +1,74 @@
+.modal {
+    /* Modal is hidden by default */
+    display: none;
+  }
+  
+  .modal-open {
+    /* Modal is displayed when .modal-open class is used */
+    display: block !important;
+    animation: fade-in 0.5s ease-in-out;
+  }
+
+  .modal.fade-out {
+    animation: fade-out 0.5s ease-in-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  #mobile-menu {
+    /* Menu is hidden by default */
+    display: none;
+    /* Add a slide-in animation to the menu */
+    animation: slide-in 0.5s ease-in-out;
+  }
+  
+  #mobile-menu.slide-out {
+    /* Add a slide-out animation to the menu */
+    animation: slide-out 0.5s ease-in-out;
+  }
+  
+  /*
+    Define the slide-in and slide-out animations
+    The "from" and "to" keywords represent the start and end states of the animation
+  */
+  @keyframes slide-in {
+    from {
+      /* Translate the menu off the screen */
+      transform: translateX(-100%);
+    }
+    to {
+      /* Return the menu to its original position */
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-out {
+    from {
+      /* Keep the menu in its original position */
+      transform: translateX(0);
+    }
+    to {
+      /* Translate the menu off the screen */
+      transform: translateX(-100%);
+    }
+  }
+  
+
+
+  
