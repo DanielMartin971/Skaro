@@ -27,6 +27,7 @@
         'GoldenRod': '#E6AF2E',
         'Mn-Blue': '#3A557A',
         'Blue-Green': '#2DC2BD',
+        'Red': '#dc2626'
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
@@ -56,7 +57,7 @@
 
 
 <!-- MAIN BACKGROUND COLOR FOR THE WHOLE PAGE USING GRADIENT -->
-<body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white">
+<body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white object-contain">
 
     <!--
   This example requires updating your template:
@@ -93,7 +94,8 @@
             </div>
           </div>
         </div>
-        <!-- ///////////////////////////////////I BELIEVE THIS IS FOR THE NOTIFICATION BELL FEAUTURE, MIGHT GET RID OF THIS///////////////////////////////////////////////////////////////////////// -->
+    
+        
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
             <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -200,7 +202,7 @@
   </header>
   <!-- ADD MODAL HERE -->
   
-<!-- -----------------------------------------MODAL FOR INPUT FORM TO ADD/DELETE----------------------- -->
+<!-- -----------------------------------------MODAL FOR INPUT FORM TO ADD----------------------- -->
 <!-- Button trigger modal -->
 <div class="flex justify-center items-center">
 <button id="modalDashboardTrigger" type="button" class="px-6
@@ -259,7 +261,7 @@ data-bs-dismiss="modal" aria-label="Close"></button>
           py-1.5
           text-base
           font-normal
-          text-gray-700
+          text-black
           bg-white bg-clip-padding
           border border-solid border-gray-300
           rounded
@@ -268,8 +270,8 @@ data-bs-dismiss="modal" aria-label="Close"></button>
           m-0
           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
         "
-        id="exampleFormControlInput1"
-        placeholder="Department Name"
+        id="inputForm"
+        placeholder="Create Department"
       />
     </div>
   </div>
@@ -280,7 +282,7 @@ data-bs-dismiss="modal" aria-label="Close"></button>
   <div class="flex justify-center">
     <div class="mb-3 xl:w-96">
       <label for="exampleFormControlInput1" class="form-label inline-block mb-2 text-gray-700 text-black"
-        >Create Department</label
+        >Create Project</label
       >
       <input
         type="text"
@@ -292,7 +294,7 @@ data-bs-dismiss="modal" aria-label="Close"></button>
           py-1.5
           text-base
           font-normal
-          text-gray-700
+          text-black
           bg-white bg-clip-padding
           border border-solid border-gray-300
           rounded
@@ -301,8 +303,8 @@ data-bs-dismiss="modal" aria-label="Close"></button>
           m-0
           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
         "
-        id="exampleFormControlInput1"
-        placeholder="Department Name"
+        id="inputForm"
+        placeholder="Create Project"
       />
     </div>
   </div>
@@ -312,8 +314,8 @@ data-bs-dismiss="modal" aria-label="Close"></button>
 <div class="modal-body relative p-4">
   <div class="flex justify-center">
     <div class="mb-3 xl:w-96">
-      <label for="exampleFormControlInput1" class="form-label inline-block mb-2 text-gray-700 text-black"
-        >Create Department</label
+      <label for="exampleFormControlInput1" class="form-label  inline-block mb-2 text-gray-700 text-black"
+        >Create Employee</label
       >
       <input
         type="text"
@@ -325,7 +327,7 @@ data-bs-dismiss="modal" aria-label="Close"></button>
           py-1.5
           text-base
           font-normal
-          text-gray-700
+          text-black 
           bg-white bg-clip-padding
           border border-solid border-gray-300
           rounded
@@ -334,8 +336,8 @@ data-bs-dismiss="modal" aria-label="Close"></button>
           m-0
           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
         "
-        id="exampleFormControlInput1"
-        placeholder="Department Name"
+        id="inputForm"
+        placeholder="Create Employee"
       />
     </div>
   </div>
@@ -385,6 +387,183 @@ ml-1">Save changes</button>
 </div>
 </div>
 </div>
+
+
+
+  <!-- -----------------------------------------MODAL FOR DELETE FUNCTIONALITY----------------------- -->
+  <!-- Button trigger modal -->
+  <div class="flex justify-center items-center">
+    <button id="deleteTrigger" type="button" class="px-6 
+    mt-6
+    py-2.5
+    bg-Red
+    text-white
+    font-medium
+    text-xs
+    leading-tight
+    uppercase
+    rounded
+    shadow-md
+    hover:bg-blue-700 hover:shadow-lg
+    focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+    active:bg-blue-800 active:shadow-lg
+    transition
+    duration-150
+    ease-in-out" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    DELETE
+    </button>
+  </div>
+  
+  
+  <!-- Modal -->
+  <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+  id="deleteBody" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog relative w-auto pointer-events-none">
+  <div
+  class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current bg-off-white">
+  <div
+    class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+    <h5 class="text-xl font-bold leading-normal text-black" id="exampleModalLabel">Edit</h5>
+    <button type="button"
+      class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+      data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  
+  
+  <!-- -----------------------MODAL BODY CONTENT GOES HERE---------------------- -->
+  <div class="modal-body relative p-4">
+    <h5 class="text-black font-bold text-xl">Delete Department</h5>
+    <br>
+    <div class="flex justify-center">
+      <div class="mb-3 xl:w-96">
+        <select class="form-select appearance-none
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-dark-background bg-clip-padding bg-no-repeat
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+            <option class="text-center" selected>Select</option>
+            <option class="text-center" value="1">Department 1</option>
+            <option class="text-center" value="2">Department 2</option>
+            <option class="text-center" value="3">Department 3</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- ----------------------PROJECT DELETE------------------- -->
+  <div class="modal-body relative p-4">
+    <h5 class="text-black font-bold text-xl">Delete Project</h5>
+    <br>
+    <div class="flex justify-center">
+      <div class="mb-3 xl:w-96">
+        <select class="form-select appearance-none
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-dark-background bg-clip-padding bg-no-repeat
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+            <option class="text-center"  selected>Select</option>
+            <option class="text-center"  value="1">Project 1</option>
+            <option class="text-center"  value="2">Project 2</option>
+            <option class="text-center"  value="3">Project 3</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- --------------------EMPLOYEE DELETE-------------------- -->
+  <div class="modal-body relative p-4">
+    <h5 class="text-black font-bold text-xl">Delete Employee</h5>
+    <br>
+    <div class="flex justify-center">
+      <div class="mb-3 xl:w-96">
+        <select class="form-select appearance-none
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-dark-background bg-clip-padding bg-no-repeat
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+            <option class="text-center" selected>Select</option>
+            <option value="1">Joe</option>
+            <option value="2">Logan</option>
+            <option value="3">Anthony</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div
+  
+    
+    class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+    <button type="button" id="closeDelete" class="px-6
+      bg-dark-background
+      py-2.5
+      bg-purple-600
+      text-white
+      font-medium
+      text-xs
+      leading-tight
+      uppercase
+      rounded
+      shadow-md
+      hover:bg-purple-700 hover:shadow-lg
+      focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0
+      active:bg-purple-800 active:shadow-lg
+      transition
+      duration-150
+      ease-in-out" data-bs-dismiss="modal">Close</button>
+    <button type="button" id="saveChanges" class="px-6
+   bg-Red
+  py-2.5
+  bg-blue-600
+  text-white
+  font-medium
+  text-xs
+  leading-tight
+  uppercase
+  rounded
+  shadow-md
+  hover:bg-blue-700 hover:shadow-lg
+  focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+  active:bg-blue-800 active:shadow-lg
+  transition
+  duration-150
+  ease-in-out
+  ml-1">Delete changes</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  
 
   <!-- -----------MAIN BODY WHERE CONTENT IS BEING STORED---------------------- -->
   <main>
