@@ -1,10 +1,5 @@
-// //Add and collect values from the login form
-// const loginFormHandle = async (event) => {
-//     event.preventDefault();
-// }
-
-const loginButton = document.querySelector('#loginButton')
-const loginForm = document.getElementById('loginForm')
+const loginButton = document.getElementById('signUpButton')
+const loginForm = document.getElementById('signUpForm')
 
 loginButton.addEventListener('click', function(event) {
     event.preventDefault()
@@ -12,7 +7,7 @@ loginButton.addEventListener('click', function(event) {
     // Grab user username and password
     const email = document.getElementById("emailInput").value
     const password = document.getElementById("passwordInput").value
-    
+    console.log(email, password)
     login(email, password)
 })
 
