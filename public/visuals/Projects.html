@@ -205,7 +205,7 @@
       Current Projects
     </h2>
   </header>
-  <!--------------- TABLE GOES HERE SINCE I CANT GET IT TO FIT ON SMALL SCREEN WITH THE CARD------------------------------- -->
+  <!--------------- -------------TABLE GOES HERE ------------------------------- -->
   <div class="flex justify-center pt-9">
     <table class="table-auto bg-off-white text-black border-collapse border md:flex-grow object-center" >
       <thread>
@@ -213,7 +213,6 @@
           <th class="border-2 px-4">Department</th>
           <th class="border-2 px-4">Project</th>
           <th class="border-2 px-4">Assigned</th>
-          <th class="border-2 px-4">Due Date</th>
         </tr>
       </thread>
       <tbody>
@@ -221,19 +220,16 @@
          <td class="border-2 px-4 text-center">Department 1</td>
          <td class="border-2 px-4 text-center">Project 1</td>
           <td class="border-2 px-4 text-center">Joe</td>
-          <td class="border-2 px-4 text-center">1/9/23</td>
         </tr>
         <tr>
           <td class="border-2 px-4 text-center">Department 2</td>
           <td class="border-2 px-4 text-center">Project 2</td>
           <td class="border-2 px-4 text-center">Logan</td>
-          <td class="border-2 px-4 text-center">1/1/23</td>
         </tr>
         <tr>
           <td class="border-2 px-4 text-center">Department 3</td>
           <td class="border-2 px-4 text-center">Project 3</td>
-          <td class="border-2 px-4 text-center">Anthony</td>
-          <td class="border-2 px-4 text-center">1/1/23</td>
+          <td class="border-2 px-4 text-center">Anthony, Matt, Caeser</td>
         </tr>
       </tbody>
     </table>
@@ -373,35 +369,6 @@ class="modal-content border-none shadow-lg relative flex flex-col w-full pointer
   </div>
 </div>
 <hr>
-<!-- ----------------DATE SELECT------------------- -->
-<div class="modal-body relative p-4">
-  <h5 class="text-black font-bold text-xl">Select Date</h5>
-  <br>
-  <div class="flex justify-center">
-    <div class="mb-3 xl:w-96">
-      <select class="form-select appearance-none
-        block
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-dark-background bg-clip-padding bg-no-repeat
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-          <option class="text-center" selected>Select</option>
-          <option value="1">N/A</option>
-          <option value="2">N/A</option>
-          <option value="3">N/A</option>
-      </select>
-    </div>
-  </div>
-</div>
 <div
 
   
@@ -449,7 +416,7 @@ ml-1">Save changes</button>
 <!-- -----------------------------------------MAIN CONTAINER BODY FOR THE CARDS TO BE PLACED------------------------- -->
 <main>
   <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-    <!-- Replace with your content -->
+  
     <div class="px-4 py-6 sm:px-0">
       <!-- --------------------------------------CONTAINER THAT CARDS SIT IN------------------------------------------------------ -->
       <div class="h-96 rounded-lg border-2 border-solid invisible md:place-content-center md:justify-evenly lg:visible lg:flex-nowrap lg:justify-center lg:gap-6 lg:pr-5 xl:visible xl:justify-center flex-wrap place-items-center flex justify-center border-gray-200 bg-off-white pt-7">
@@ -461,7 +428,7 @@ ml-1">Save changes</button>
           <br>
           <p class="text-center">0</p>
         </div>
-        <!-- Card for project status -->
+       
         <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black my-4 text-xl font-bold  w-64 h-48 p-4 visible" id="project">
           <p class="text-center">Weekly Deadlines</p>
           <hr>
@@ -470,7 +437,6 @@ ml-1">Save changes</button>
         </div>
       </div>
     </div>
-    <!-- /End replace -->
   </div>
 </main>
 </div>

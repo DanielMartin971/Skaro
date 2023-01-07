@@ -17,6 +17,7 @@ module.exports = {
         'GoldenRod': '#E6AF2E',
         'Mn-Blue': '#3A557A',
         'Blue-Green': '#2DC2BD',
+        'Red': '#dc2626'
         
       },
       fontFamily: {

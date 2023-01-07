@@ -6,11 +6,20 @@ const menuDisplay = document.getElementById('mobile-menu');
 const userMenu = document.getElementById('signout-btn');
 const signoutMenu = document.getElementById('signoutHide');
 
-//TODO getElementById for modal access
+//Used for modal access on the dashboard
 const modalDashboardTrigger = document.getElementById('modalDashboardTrigger');
 const dashboardModal = document.getElementById('dashboardModal');
 const closeDashboardTrigger = document.getElementById('closeDashTrigger');
-console.log(closeDashboardTrigger);
+
+//access input form with for same as id
+const formInput = document.getElementById('inputForm');
+
+//DELETE functionality
+const deleteTrigger = document.getElementById('deleteTrigger');
+const deleteBody = document.getElementById('deleteBody');
+const closeDelete = document.getElementById('closeDelete');
+
+
 
 //Open the mobile menu and close the mobile menu
 mobileNav.addEventListener('click', () => {
@@ -38,4 +47,21 @@ modalDashboardTrigger.addEventListener('click', () => {
 closeDashboardTrigger.addEventListener('click', () => {
     dashboardModal.classList.remove('modal-open');
 });
+
+
+//Selects the form input element and is fired everytime the input field changes 
+formInput.addEventListener('input', (event) => {
+    console.log('Hello')
+    console.log(event.target.value);
+});
+
+//Need to be able to open delete modal
+deleteTrigger.addEventListener('click', () => {
+    deleteBody.classList.toggle('modal-open');
+});
+//need to close the modal
+closeDelete.addEventListener('click', () => {
+    deleteBody.classList.remove('modal-open');
+});
+
 
