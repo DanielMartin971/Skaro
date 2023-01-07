@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/input.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -74,9 +75,6 @@
               <a href="tasks.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Tasks</a>
 
               <a href="Team.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Team</a>
-
-              <a href="Login.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Login</a>
-
             </div>
           </div>
         </div>
@@ -151,9 +149,6 @@
         <a href="tasks.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tasks</a>
 
         <a href="Team.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-
-        <a href="Login.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Login</a>
-
       </div>
       <div class="border-t border-gray-700 pt-4 pb-3">
         <div class="flex items-center px-5">
@@ -183,12 +178,13 @@
       <h1 class="text-3xl  tracking-tight text-gray-900">Teams</h1>
     </div>
   </header>
+
+
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <!-- Replace with your content -->
       <div class="px-4 py-6 sm:px-0">
         <!-- container with cards -->
-        <!-- Cant get container to go away -->
         <div class="h-96 rounded-lg border-2 border-solid invisible flex flex-wrap place-items-center justify-center md:space-x-5 lg:visible lg:flex-nowrap lg:gap-4 lg:pr-5 border-gray-200 bg-off-white">
           <h1>
           </h1>
@@ -213,7 +209,6 @@
             <p class="text-center">No Status</p>
           </div>
           <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black text-xl visible font-bold my-4 w-64 h-48 p-4">
-            <!-- Upcoming deadlines for departments? Or would that fit into the projects page? -->
             <p class="text-center">Upcoming Deadlines</p>
             <hr>
           </div>
@@ -223,23 +218,6 @@
     </div>
   </main>
 </div>
-
-
-
-
-
-
-
-
-<!-- Add in another section to display the managers tasks that he has to complete -->
-<!-- TODO employees have first last email and status -->
-<!-- Project: add tasks page into projects
-Employee: is manager? , firstName, lastName, email, projects, password
-Tasks: add tasks for employees, work on tasks for manager 
-Team Status: Add cards of each department and employees  -->
-
-
-
 </body>
 <script src="../js/team.js"></script>
 </html>
