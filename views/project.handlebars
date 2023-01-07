@@ -1,10 +1,16 @@
 <body>
+     {{!-- NAME OF PAGE YOU ARE ON --}}
+      <h1 class="text-3xl  tracking-tight text-gray-900">Projects</h1>
+    </div>
+  </header>
+
       <header>
     <h2 class="text-xl p-5">
       Current Projects
     </h2>
   </header>
  
+ {{!-- TABLE --}}
   <div class="flex justify-center pt-9">
     <table class="table-auto bg-off-white text-black border-collapse border md:flex-grow object-center" >
       <thread>
@@ -36,6 +42,181 @@
   </div>
 
 
+    {{!-- MODAL START --}}
+  <div class="flex justify-center items-center">
+  <button id="modalTrigger" type="button" class="px-6
+  mt-6
+  py-2.5
+  bg-dark-background
+  text-white
+  font-medium
+  text-xs
+  leading-tight
+  uppercase
+  rounded
+  shadow-md
+  hover:bg-blue-700 hover:shadow-lg
+  focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+  active:bg-blue-800 active:shadow-lg
+  transition
+  duration-150
+  ease-in-out" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Create
+  </button>
+</div>
+
+{{!-- 
+<!-- Modal --> --}}
+<div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog relative w-auto pointer-events-none">
+<div
+class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current bg-off-white">
+<div
+  class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+  <h5 class="text-xl font-bold leading-normal text-black" id="exampleModalLabel">Edit</h5>
+  <button type="button"
+    class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+    data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+
+{{!-- <!-- -----------------------MODAL BODY CONTENT GOES HERE---------------------- --> --}}
+{{!-- PROJECT SELECT --}}
+<div class="modal-body relative p-4">
+  <h5 class="text-black font-bold text-xl">Select Department</h5>
+  <br>
+  <div class="flex justify-center">
+    <div class="mb-3 xl:w-96">
+      <select class="form-select appearance-none
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-dark-background bg-clip-padding bg-no-repeat
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+          <option class="text-center" selected>Select</option>
+          <option class="text-center" value="1">Department 1</option>
+          <option class="text-center" value="2">Department 2</option>
+          <option class="text-center" value="3">Department 3</option>
+      </select>
+    </div>
+  </div>
+</div>
+<hr>
+{{!-- <!--PROJECT SELECT --> --}}
+<div class="modal-body relative p-4">
+  <h5 class="text-black font-bold text-xl">Select Project</h5>
+  <br>
+  <div class="flex justify-center">
+    <div class="mb-3 xl:w-96">
+      <select class="form-select appearance-none
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-dark-background bg-clip-padding bg-no-repeat
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+          <option class="text-center"  selected>Select</option>
+          <option class="text-center"  value="1">Project 1</option>
+          <option class="text-center"  value="2">Project 2</option>
+          <option class="text-center"  value="3">Project 3</option>
+      </select>
+    </div>
+  </div>
+</div>
+<hr>
+{{!-- EMPLOYEE SELECT --}}
+<div class="modal-body relative p-4">
+  <h5 class="text-black font-bold text-xl">Select Employee</h5>
+  <br>
+  <div class="flex justify-center">
+    <div class="mb-3 xl:w-96">
+      <select class="form-select appearance-none
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-dark-background bg-clip-padding bg-no-repeat
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+          <option class="text-center" selected>Select</option>
+          <option value="1">Joe</option>
+          <option value="2">Logan</option>
+          <option value="3">Anthony</option>
+      </select>
+    </div>
+  </div>
+</div>
+<hr>
+<div
+
+  {{!-- modal --}}
+  class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+  <button type="button" id="closeTrigger" class="px-6
+    bg-dark-background
+    py-2.5
+    bg-purple-600
+    text-white
+    font-medium
+    text-xs
+    leading-tight
+    uppercase
+    rounded
+    shadow-md
+    hover:bg-purple-700 hover:shadow-lg
+    focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0
+    active:bg-purple-800 active:shadow-lg
+    transition
+    duration-150
+    ease-in-out" data-bs-dismiss="modal">Close</button>
+  <button type="button" id="saveChanges" class="px-6
+ bg-dark-background
+py-2.5
+bg-blue-600
+text-white
+font-medium
+text-xs
+leading-tight
+uppercase
+rounded
+shadow-md
+hover:bg-blue-700 hover:shadow-lg
+focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+active:bg-blue-800 active:shadow-lg
+transition
+duration-150
+ease-in-out
+ml-1">Save changes</button>
+</div>
+</div>
+</div>
+</div>
+
+    {{!-- MAIN BODY WITH CARDS --}}
     <main>
   <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
     <div class="px-4 py-6 sm:px-0">
@@ -48,7 +229,7 @@
           <h1 class="text-center">My Projects</h1>
           <hr>
           <br>
-          <p class="text-center">{{this.projecName}}</p>
+          <p class="text-center">{{this.projectName}}</p>
         </div>
         <!-- Card for project status -->
         <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black my-4 text-xl font-bold  w-64 h-48 p-4 visible" id="project">
@@ -59,7 +240,6 @@
         </div>
       </div>
     </div>
-    <!-- /End replace -->
   </div>
 </main>
 </body>
