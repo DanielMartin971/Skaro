@@ -1,10 +1,12 @@
 const loginButton = document.getElementById('loginButton');
 const loginForm = document.getElementById('loginForm');
 
+const signupLink = document.getElementById('signupLink');
+
 
 loginButton.addEventListener('click', async (event) => {
     //Prevent Default of submitting
-    event.preventDefault()
+    event.preventDefault();
     // Grab user username and password
     const email = document.querySelector("#emailInput").value
     const password = document.querySelector("#passwordInput").value
@@ -13,7 +15,7 @@ loginButton.addEventListener('click', async (event) => {
     //Check if the email and password value are not empty
     if (email && password) {
         //Need to send a POST request to API endpoint
-        const response = await sendLoginReequest(email, password);
+        const response = await sendLoginRequest(email, password);
         if (response.ok) {
             //if the response is ok redirect them to dashboard
             document.location.replace('/dashboard');
@@ -21,10 +23,21 @@ loginButton.addEventListener('click', async (event) => {
         } else {
             alert(response.statusText);
         }
+        
     }
 
 });
 
-loginButton.addEventListener('click', function() {
-    console.log('CLICKED');
-})
+// signupLink.addEventListener('click', (event) => {
+//     event.preventDefault();
+
+// });
+
+async function sendSignUpRequst(email, password) {
+    return await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+    });
+}
+

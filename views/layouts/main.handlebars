@@ -16,8 +16,11 @@
         'orange': '#F26419',
         'cyan': '#55DDE0',
         'text-white': '#ffffff',
+        //---DARK BACKGROUND IS USED WITH BABY BLUE TO MAKE THE GRADIENT FOR MAIN BODY COLOR----//
         'dark-background': '#1f2937',
+        //---BABY-BLUE USED WITH DARK-BACKGROUND TO CREATE THE GRADIENT FOR THE MAIN BODY COLOR---//
         'baby-blue': '#0A81D1',
+        //---OFF WHITE WILL BE USED FOR THE CONTAINER BODY FOR CARDS/LOGIN PAGE-----------------//
         'off-white': '#d1d5db',
         'black': '#1e1e1e',
         'Golden-Brown': '#AD6600',
@@ -43,7 +46,6 @@
     <title>Skaro</title>
 </head>
 
-{{!-- MAIN BODY --}}
 <body class="bg-gradient-to-r from-dark-background  to-baby-blue text-text-white">
   <section class="h-screen bg-gray-700">
   <div class="px-6 h-full text-gray-800">
@@ -59,8 +61,7 @@
             <p class="text-center font-semibold mx-4 mb-0">Login</p>
           </div>
 
-
-          {{!-- <!-- Email input --> --}}
+          <!-- Email input -->
           <div class="mb-6">
             <input
               type="text"
@@ -70,7 +71,7 @@
             />
           </div>
 
-          {{!-- <!-- Password input --> --}}
+          <!-- Password input -->
           <div class="mb-6">
             <input
               type="password"
@@ -88,12 +89,12 @@
             >
               Login
             </button>
-            <p class="text-sm font-semibold mt-2 pt-1 mb-0">
+            <p id="signupLink" class="text-sm font-semibold mt-2 pt-1 mb-0">
               Don't have an account?
               <br>
               <br>
               <a
-                href="../signUp.handlebars"
+                href="/views/signUp.handlebars"
                 class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
                 >Register</a
               >
@@ -104,5 +105,5 @@
     </div>
   </div>
 </section>
-<script src="../js/login.js"></script>
+<script src=""></script>
 </body>
