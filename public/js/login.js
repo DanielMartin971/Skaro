@@ -25,10 +25,6 @@ loginButton.addEventListener('click', async (event) => {
 
 });
 
-async function sendLoginReequest(email, password) {
-    return await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-    });
-}
+loginButton.addEventListener('click', function() {
+    console.log('CLICKED');
+})
