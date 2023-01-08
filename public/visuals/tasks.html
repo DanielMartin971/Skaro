@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasks</title>
+    <link rel="stylesheet" href="../src/input.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -64,16 +65,17 @@
               </div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
-                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="mainPage.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75" aria-current="page">Dashboard</a>
-    
-                  <a href="Projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Projects</a>
-    
-                  <a href="tasks.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Tasks</a>
-    
-                  <a href="Team.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Team</a>
-    
-                </div>
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="mainPage.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75" aria-current="page">Dashboard</a>
+
+              <a href="Projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Projects</a>
+
+              <a href="tasks.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Tasks</a>
+
+              <a href="Team.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75">Team</a>
+
+              <a href="Login.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium hover:opacity-75" aria-current="page">Login</a>
+            </div>
               </div>
             </div>
 
@@ -148,8 +150,9 @@
             <a href="tasks.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tasks</a>
     
             <a href="Team.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-    
           </div>
+
+
           <div class="border-t border-gray-700 pt-4 pb-3">
             <div class="flex items-center px-5">
               <div class="flex-shrink-0">
@@ -163,8 +166,6 @@
               </button>
             </div>
             <div class="mt-3 space-y-1 px-2">
-     
-    
               <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign out</a>
             </div>
           </div>
@@ -173,7 +174,6 @@
 
 
 
-    <!-- --------------------------SEE IF WE WANT TO KEEP THE COLOR HERE----------------------- -->
       <header class="bg-white shadow bg-gradient-to-r from-Mn-Blue to-Blue-Green">
         <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
           <h1 class="text-3xl  tracking-tight text-gray-900">Tasks</h1>
@@ -185,8 +185,6 @@
       <main>
         <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
           <div class="px-4 py-6 sm:px-0">
-
-
             <!-- container with cards -->
             <div class="h-96 rounded-lg border-2 border-solid invisible flex flex-wrap place-items-center justify-center md:space-x-5 lg:visible lg:flex-nowrap lg:gap-6 lg:pr-5 xl:visible border-gray-200 bg-off-white">
               <h1>
@@ -221,25 +219,9 @@
           <!-- /End replace -->
         </div>
       </main>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- Add in another section to display the managers tasks that he has to complete -->
-    <!-- TODO employees have first last email and status -->
-    <!-- Project: project name, employees assigned, progress, tasks projects for all departments / add taks page into projects
-    Employee: is manager? , firstName, lastName, email, projects, password
-    Tasks: add tasks for employees, work on tasks for manager 
-    Team Status: Add cards of each department and employees  -->
-    
-    
-    
-    
+    </div>  
 </body>
+
+
 <script src="../js/tasks.js"></script>
 </html>
