@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-
+const bcrypt = require('bcrypt')
 // This is a post for login, checking information
 router.post("/login", async (req, res) => {
   try {
@@ -15,7 +15,10 @@ router.post("/login", async (req, res) => {
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    // const validPassword = await userData.checkPassword(req.body.password);
+    // changed to include bcrypt 'checkPassword' undefined
+
+    const validPassword = await bcrypt.compare(req.body.password, userData.password);
 
     // If password is incorrect, it shoots err msg
     if (!validPassword) {
@@ -47,3 +50,18 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
+
+// route to create a new user
+
+router.post('/createUser', async (req, res) => {
+ const salt = await bcrypt.genSalt(10);
+ var usr = {
+  firstName : req.body.first_name,
+  lastName : req.body.last_name,
+  email : req.body.email,
+  password : await bcrypt.hash(req.body.password, salt)
+ };
+ created_user = await User.create(usr);
+});
+
+module.exports = router;
