@@ -3,6 +3,14 @@ const loginForm = document.getElementById('loginForm');
 
 const signupLink = document.getElementById('signupLink');
 
+async function sendLoginRequst(email, password) {
+    return await fetch('/api/users/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+    });
+}
+
 
 loginButton.addEventListener('click', async (event) => {
     //Prevent Default of submitting
@@ -28,16 +36,12 @@ loginButton.addEventListener('click', async (event) => {
 
 });
 
+
+
 // signupLink.addEventListener('click', (event) => {
-//     event.preventDefault();
-
-// });
-
-async function sendSignUpRequst(email, password) {
-    return await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-    });
-}
+//     // event.preventDefault();
+//     document.location.replace('/signup');
+//     // sendCreateRequst();
+// //    console.log('click');
+// }, false);
 
