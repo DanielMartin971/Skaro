@@ -2,8 +2,8 @@ const signUpButton = document.getElementById('signUpButton');
 const SignUpForm = document.getElementById('signUpForm');
 
 
-async function sendSignUpRequst(email, password) {
-    return await fetch('/api/users', {
+async function sendSignUpRequest(email, password) {
+    return await fetch('/api/homeRoutes/createUser', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },

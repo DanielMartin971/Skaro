@@ -9,7 +9,7 @@ router.get("/", withAuth, async (req, res) => {
       attributes: { exclude: ["password"] },
       order: [["name", "ASC"]],
     });
-    const employees = Employee.Data.map((project) =>
+    const employees = employeeData.map((project) =>
       project.get({ plain: true })
     );
     res.render("homepage", {
