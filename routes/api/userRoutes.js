@@ -1,10 +1,11 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { Employee } = require("../../models");
 const bcrypt = require('bcrypt')
 // This is a post for login, checking information
 router.post("/login", async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    //Leave userData for now 
+    const userData = await Employee.findOne({ where: { email: req.body.email } });
 
     // This checks if the userdata is the correct one for the email or password
     // If incorrect, it shoots the err msg
@@ -56,8 +57,8 @@ router.post("/logout", (req, res) => {
 router.post('/createUser', async (req, res) => {
  const salt = await bcrypt.genSalt(10);
  var usr = {
-  firstName : req.body.first_name,
-  lastName : req.body.last_name,
+  // firstName : req.body.first_name,
+  // lastName : req.body.last_name,
   email : req.body.email,
   password : await bcrypt.hash(req.body.password, salt)
  };
