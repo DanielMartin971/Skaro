@@ -1,8 +1,7 @@
-<body>
+
      {{!-- NAME OF PAGE YOU ARE ON --}}
       <h1 class="text-3xl  tracking-tight text-gray-900">Projects</h1>
-    </div>
-  </header>
+   
 
       <header>
     <h2 class="text-xl p-5">
@@ -21,21 +20,21 @@
         </tr>
       </thread>
       <tbody>
-        {{#each this}}
+        {{#each project as |project|}}
         <tr>
          <td class="border-2 px-4 text-center">Department 1</td>
-         <td class="border-2 px-4 text-center">{{projecName}}</td>
-          <td class="border-2 px-4 text-center">{{firstName}}{{lastName}}</td>
+         <td class="border-2 px-4 text-center">{{project.projectName}}</td>
+          <td class="border-2 px-4 text-center">{{project.firstName}}{{project.lastName}}</td>
         </tr>
         <tr>
           <td class="border-2 px-4 text-center">Department 2</td>
-          <td class="border-2 px-4 text-center">{{projecName}}</td>
-          <td class="border-2 px-4 text-center">{{firstName}}{{lastName}}</td>
+          <td class="border-2 px-4 text-center">{{project.projectName}}</td>
+          <td class="border-2 px-4 text-center">{{project.firstName}}{{project.lastName}}</td>
         </tr>
         <tr>
           <td class="border-2 px-4 text-center">Department 3</td>
-          <td class="border-2 px-4 text-center">{{projecName}}</td>
-          <td class="border-2 px-4 text-center">{{firstName}}{{lastName}}</td>
+          <td class="border-2 px-4 text-center">{{project.projectName}}</td>
+          <td class="border-2 px-4 text-center">{{project.firstName}}{{project.lastName}}</td>
         </tr>
       </tbody>
     </table>
@@ -224,22 +223,24 @@ ml-1">Save changes</button>
       <div class="h-96 rounded-lg border-2 border-solid invisible md:place-content-center md:justify-evenly lg:visible lg:flex-nowrap lg:justify-center lg:gap-6 lg:pr-5 xl:visible xl:justify-center flex-wrap place-items-center flex justify-center border-gray-200 bg-off-white pt-7">
         <h1>
         </h1>
-        {{#each projects}}
+        {{#each project as |project|}}
         <div class="rounded shadow-xl bg-gradient-to-t from-dark-background to-black my-4 text-xl font-bold w-64 h-48 p-4 visible">
           <h1 class="text-center">My Projects</h1>
           <hr>
           <br>
-          <p class="text-center">{{this.projectName}}</p>
+          <p class="text-center">{{project.projectName}}</p>
+          
         </div>
         <!-- Card for project status -->
         <div class="rounded shadow-xl  bg-gradient-to-t from-dark-background to-black my-4 text-xl font-bold  w-64 h-48 p-4 visible" id="project">
           <p class="text-center">Weekly Deadlines</p>
           <hr>
           <br>
-          <p class="text-center">{{this.progress}}</p>
+          <p class="text-center">{{project.progress}}</p>
         </div>
+        {{/each}}
       </div>
+      
     </div>
   </div>
 </main>
-</body>
