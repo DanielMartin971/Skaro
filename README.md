@@ -12,6 +12,10 @@ Are you a leader at a small or medium-sized business looking to streamline commu
 
 To access the Skaro Dashboard simply click on the heroku link and follow the on screen instructions to sign up in order to start "Your secret weapon for flawlessly delegated tasks."
 
+## Deployment
+
+https://mpe.herokuapp.com/login
+
 
 ## Credits
 
