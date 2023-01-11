@@ -25,6 +25,7 @@ const sess = {
 };
 
 app.use(session(sess));
+//Set express to read the views file
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
@@ -32,6 +33,8 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
+
 
 app.use(routes);
 

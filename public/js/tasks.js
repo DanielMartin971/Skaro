@@ -20,3 +20,4 @@ taskMenu.addEventListener('click', () => {
         taskSignout.style.display = 'none';
     }
 });
+
