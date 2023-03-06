@@ -19,11 +19,11 @@ https://mpe.herokuapp.com/login
 
 ## Credits
 
-https://github.com/BaileyM96
-https://github.com/TDGLU
-https://github.com/DanielMartin971
-https://github.com/Ajaws2022
-https://github.com/dlrethan
+https://github.com/BaileyM96 <br>
+https://github.com/TDGLU <br>
+https://github.com/DanielMartin971 <br>
+https://github.com/Ajaws2022 <br>
+https://github.com/dlrethan <br>
 
 ## License
 
